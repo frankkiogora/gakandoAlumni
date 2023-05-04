@@ -1,24 +1,26 @@
-.about-container {
-  height: 100vh;
-  background-image: url("../assets/schImage.jpeg");
-  background-size: cover;
-  background-position: center center;
+.container {
+  background-color: #f0fff4;
+  border-radius: 10px;
+  padding: 30px;
 }
 
-.about-text {
-  margin-top: 150px;
-  padding: 50px;
-  background-color: rgba(255, 255, 255, 0.8);
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
 }
 
-.about-text h2 {
-  color: #1565c0;
-  text-align: center;
-  margin-bottom: 30px;
+h2 {
+  color: #48bb78;
 }
 
-.about-text p {
-  font-size: 18px;
+p {
+  font-size: 20px;
   line-height: 1.5;
-  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 16px;
+  }
 }

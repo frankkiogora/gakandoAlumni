@@ -1,26 +1,156 @@
-/* Home.css */
-.home-container {
-  background-color: aqua;
-  padding: 50px;
+Global styles body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
 }
 
-.jumbotron {
-  background-color: #dbe9ff;
-  padding: 50px;
-  margin-top: 50px;
+.container {
+  max-width: 980px;
+  margin: auto;
+}
+
+/* Hero section */
+.HeroSection {
+  height: 500px;
+
+  background-image: url("https://source.unsplash.com/1600x900/?nature");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.HeroText {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.925);
+}
+
+.HeroText h1 {
+  font-size: 4rem;
+  margin: 0;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #000;
+}
+
+.HeroText p {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px #000;
+}
+
+.btn-cta {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 30px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-cta:hover {
+  background-color: #218838;
+}
+
+/* Featured section */
+.featured-section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.featured-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.featured-heading h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.featured {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featured-item {
+  width: 31%;
   text-align: center;
 }
 
-.nav-link {
-  color: #333;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: block;
-  margin: 10px 0;
+.featured-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-.nav-link:hover {
-  color: #0d47a1;
+.featured-item h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.featured-item p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Gallery section */
+.gallery-section {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.overlay h3,
+.overlay p {
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  padding: 10px;
 }

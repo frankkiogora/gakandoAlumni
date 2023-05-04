@@ -1,84 +1,74 @@
-import React from 'react';
-import { Container, Row, Col, Navbar, Nav, Card, Button } from 'react-bootstrap';
+import React from "react";
+import { useState } from "react";
+import "../styles/Home.css";
+<script src="http://localhost:8097"></script>;
 
-
-function Home() {
+const Home = () => {
+  const [active, setActive] = useState(false);
+  const toggleOverlay = () => setActive(!active);
   return (
-    <div>
-    <Container>
-        <Row className="mt-4">
-          <Col>
-            <Card>
-              <Card.Body>
-                <Card.Title>Welcome to Gakando Alumni</Card.Title>
-                <Card.Text>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis felis a nisi consectetur pretium. Nulla facilisi.
-                </Card.Text>
-                <Button variant="primary" href="/about">Learn More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+    <div className="home-section">
+      {/* Hero section */}
+      <section className="HeroSection">
+        <div className="HeroText">
+          <h1>Welcome to Gakando Alumni</h1>
+          <p>Your journey to success starts here!</p>
+          <button className="btn-cta">Get Started</button>
+        </div>
+      </section>
 
-        <Row className="mt-4">
-          <Col>
-            <Card>
-              <Card.Body>
-                <Card.Title>About Us</Card.Title>
-                <Card.Text>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis felis a nisi consectetur pretium. Nulla facilisi.
-                </Card.Text>
-                <Button variant="primary" href="/about">Learn More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col>
-            <Card>
-              <Card.Body>
-                <Card.Title>Blog</Card.Title>
-                <Card.Text>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis felis a nisi consectetur pretium. Nulla facilisi.
-                </Card.Text>
-                <Button variant="primary" href="/events">View Alumni</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-
-                    <Col>
-            <Card>
-              <Card.Body>
-                <Card.Title>Upcoming Events</Card.Title>
-                <Card.Text>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis felis a nisi consectetur pretium. Nulla facilisi.
-                </Card.Text>
-                <Button variant="primary" href="/events">View Alumni</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          
-
-
-
-
-
-
-
-          <Col>
-            <Card>
-              <Card.Body>
-                <Card.Title>Contact Us</Card.Title>
-                <Card.Text>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis felis a nisi consectetur pretium. Nulla facilisi.
-                </Card.Text>
-                <Button variant="primary" href="/contact">Contact Us</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+      {/* Gallery section */}
+      <section className="gallery-section">
+        <h2>Alumni Projects</h2>
+        <div className="gallery">
+          <div className="gallery-item">
+            <img
+              src="https://source.unsplash.com/800x800/?nature"
+              alt="Nature"
+              onClick={toggleOverlay}
+            />
+            <div className={`overlay ${active ? "active" : ""}`}>
+              <h3>Library</h3>
+              <p>New School Library minus the books.</p>
+            </div>
+          </div>
+          <div className="gallery-item">
+            <img
+              src="https://source.unsplash.com/800x800/?animals"
+              alt="Animals"
+              onClick={toggleOverlay}
+            />
+            <div className={`overlay ${active ? "active" : ""}`}>
+              <h3>Class Room </h3>
+              <p>A few images of the new classrooms.</p>
+            </div>
+          </div>
+          <div className="gallery-item">
+            <img
+              src="https://source.unsplash.com/800x800/?food"
+              alt="Food"
+              onClick={toggleOverlay}
+            />
+            <div className={`overlay ${active ? "active" : ""}`}>
+              <h3>School Landscaping</h3>
+              <p>The environment looks nice for study.</p>
+            </div>
+          </div>
+          <div className="gallery-item">
+            <img
+              src="https://source.unsplash.com/800x800/?travel"
+              alt="Travel"
+              onClick={toggleOverlay}
+            />
+            <div className={`overlay ${active ? "active" : ""}`}>
+              <h3>The school gate</h3>
+              <p>The gate that will be upgraded soon.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
-}
+};
 
 export default Home;
